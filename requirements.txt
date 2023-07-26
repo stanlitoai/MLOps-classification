@@ -5,7 +5,6 @@ notebook
 numpy
 matplotlib
 seaborn
-pytorch
 huggingface
 python-box==6.0.2
 pyYAML
