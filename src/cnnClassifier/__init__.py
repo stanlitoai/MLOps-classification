@@ -1,10 +1,10 @@
-"""__INIT__"""
+"""Logging configuration"""
 
 import os
 import sys
 import logging
 
-LOGGING_STR = "[%(asctime)s: %(levelname)s: %(module)s: %(messages)s]"
+LOGGING_STR = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
 
 LOG_DIR = "logs"
 log_filepath = os.path.join(LOG_DIR, "running_logs.log")
