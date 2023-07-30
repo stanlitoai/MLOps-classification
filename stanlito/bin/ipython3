@@ -1,4 +1,4 @@
-#!/workspaces/MLOps-classification/stanlito/bin/python3
+#!/workspaces/MLOps-classification/stanlito/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
