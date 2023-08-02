@@ -1,11 +1,13 @@
-from src.cnnClassifier.constants import *
-from src.cnnClassifier.utils.common import read_yaml, create_directories
-from src.cnnClassifier.entity.config_entity import (DataIngestionConfig, 
-                                                    PrepareBaseModelConfig,
-                                                    PrepareCallbacksConfig,
-                                                    TrainingConfig)
+from cnnClassifier.constants import *
 from pathlib import Path
 import os
+from cnnClassifier.utils.common import read_yaml, create_directories, save_json
+from cnnClassifier.entity.config_entity import (DataIngestionConfig, 
+                                                    PrepareBaseModelConfig,
+                                                    PrepareCallbacksConfig,
+                                                    TrainingConfig,
+                                                    EvaluationConfig)
+
 
 class ConfigurationManager:
     def __init__(
@@ -91,4 +93,15 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model=Path("artifacts/training/model.h5"),
+            training_data=Path("artifacts/data_ingestion/Chicken-fecal-images"),
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
     
