@@ -4,7 +4,7 @@ This project focuses on the prediction of chicken diseases using an `end-to-end 
 
 ## Author
 
-- [@Hamza Jakouk](https://www.github.com/hamzajakouk)
+- [@Engr Chidera Stanley](https://github.com/Stanlito-AI)
 
 ## Languages and Tools
 
